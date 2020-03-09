@@ -1,0 +1,25 @@
+{
+  "name": "vector-clock",
+  "version": "1.0.0",
+  "description": "A simple Vector Clock implementation",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "jest",
+    "tsc": "tsc"
+  },
+  "keywords": [
+    "vector",
+    "clock",
+    "crdt",
+    "distributed",
+    "systems"
+  ],
+  "author": "Matthew Lloyd",
+  "license": "Apache-2.0",
+  "devDependencies": {
+    "@types/jest": "^25.1.4",
+    "jest": "^25.1.0",
+    "ts-jest": "^25.2.1",
+    "typescript": "^3.8.3"
+  }
+}
