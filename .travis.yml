@@ -1,5 +1,8 @@
 language: nodejs
 
+nodejs:
+  - '12.13'
+ 
 before_script:
   - npm run setup
   - npm run build
