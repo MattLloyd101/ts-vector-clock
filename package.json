@@ -19,11 +19,18 @@
   ],
   "author": "Matthew Lloyd",
   "license": "Apache-2.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattLloyd101/ts-vector-clock.git"
+  },
   "devDependencies": {
     "@types/jest": "^25.1.4",
     "jest": "^25.1.0",
     "ts-jest": "^25.2.1",
     "typedoc": "^0.16.11",
     "typescript": "^3.8.3"
+  },
+  "publishConfig": {
+    "access": "public"
   }
 }
