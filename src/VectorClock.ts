@@ -78,4 +78,16 @@ export default class VectorClock {
     static concurrentWith(clock1: VectorClock, clock2: VectorClock): boolean {
         return !VectorClock.lessThanOrEqualTo(clock1, clock2) && !VectorClock.lessThanOrEqualTo(clock2, clock1)
     }
+
+    static compare(clock1: VectorClock, clock2: VectorClock): number {
+        if(clock1.lessThan(clock2)) {
+            return -1;
+        }
+
+        if(clock2.lessThan(clock1)) {
+            return 1;
+        }
+
+        return clock1.memberIndex - clock2.memberIndex;
+    }
 }
