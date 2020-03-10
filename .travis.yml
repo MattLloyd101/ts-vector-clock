@@ -20,14 +20,20 @@ deploy:
     local_dir: docs/
     github_token:
       secure: BI6tG4U1C0iSLcJGuSg0h7LN8UoHUH/alckFRP3pOJy9cxk6f33jhS4oMAGlG5Kr936alkc06uhwUYedMeoItX5/rIXXlZ/0txsYg288MbyZHeR1Qi/EzrzeJDLzAcmiRiFNQ39Y9E7brBZ5yl5leMARzYKfx593lyibXNrTXIp5rVFxz/biIzi14ECHeVptQMpsGGDvHwuSwbveBBP1VWN44WBqDsj0+Hvfjj+HG5SG/e/74NG2DVcnqCw8xRZwm8kIgGMl95CwYyJV/2igZGvQ1hoU+sjmrJkGJ2VgwqNyFLsRWlJ214p1+tGtqZAq+u66BJzAxr6iIJSRZU31zZ51PD3ygCKVUGNkQnZVNH6yvvdOPua+KltLYyQPzUfhg3fu8j1zPw5VqL9ze2s58MooJCGBNDqQo5OxFTlFfAV5Blhxd2I4LvCzfPZdq+YwvdKvGNRI8Fgsk7adt1rA+n5CW2WmJXxlgseZw0uhGKzzb5VnX7fHwLovSf+WboOBzLkFakklKFU+Q7QG7g6gLRU8tbcD3th8lFuAwCp4G2RbrHBOe29VZ4f04WYh6vii2LtP0vY8860CtcZoab5uGzwP9u4vXvly8vvYzCrncCDOeF6lOMUZ274Xt4M28dQikXWpemXqIdXu7Dw+DVjdPhe0nepRZki7jtwerTm47Aw=
+    on:
+      tags: true
   - provider: releases
     api_key:
       secure: BI6tG4U1C0iSLcJGuSg0h7LN8UoHUH/alckFRP3pOJy9cxk6f33jhS4oMAGlG5Kr936alkc06uhwUYedMeoItX5/rIXXlZ/0txsYg288MbyZHeR1Qi/EzrzeJDLzAcmiRiFNQ39Y9E7brBZ5yl5leMARzYKfx593lyibXNrTXIp5rVFxz/biIzi14ECHeVptQMpsGGDvHwuSwbveBBP1VWN44WBqDsj0+Hvfjj+HG5SG/e/74NG2DVcnqCw8xRZwm8kIgGMl95CwYyJV/2igZGvQ1hoU+sjmrJkGJ2VgwqNyFLsRWlJ214p1+tGtqZAq+u66BJzAxr6iIJSRZU31zZ51PD3ygCKVUGNkQnZVNH6yvvdOPua+KltLYyQPzUfhg3fu8j1zPw5VqL9ze2s58MooJCGBNDqQo5OxFTlFfAV5Blhxd2I4LvCzfPZdq+YwvdKvGNRI8Fgsk7adt1rA+n5CW2WmJXxlgseZw0uhGKzzb5VnX7fHwLovSf+WboOBzLkFakklKFU+Q7QG7g6gLRU8tbcD3th8lFuAwCp4G2RbrHBOe29VZ4f04WYh6vii2LtP0vY8860CtcZoab5uGzwP9u4vXvly8vvYzCrncCDOeF6lOMUZ274Xt4M28dQikXWpemXqIdXu7Dw+DVjdPhe0nepRZki7jtwerTm47Aw=
     file_glob: true
     file: "vector-clock-*.tgz"
     skip_cleanup: true
+    on:
+      tags: true
   - provider: npm
     skip_cleanup: true
     email: "Matt.Lloyd101@gmail.com"
     api_key:
       secure: SAYJM+kcUh7HysAObpagDC1m5qciV9t7lk8wd6+69KFVWFFDJYBQfIkwQRHoaasXg68WmNkE6hWp/ttE+eWMbetb9d7RMvRQ5mzBq2N5eK8i8+I2lDa315zjUHfjaVHM+rlhT+mEKrCBzMTOSVYDQ1Mawq0L3J8zUCrlVfb/HHR0eFvsx4fSl77vCJexiyN3k7oCZb9xb6IvHRHPF36+GYOnnGhvbSdZdysNnvsIW89ZRmkM2dsi5UNe1G0Vng7Axki9kUDHdP3Yt2W96W+/nX8pJuu21F169zb4nvCLd2oqrO+X35etYwe27e9gWrUt9tbC8xuRNbblTABapHbMRFeE1wb+lUVsN0qrj+ZQXCemEe3fY2iVyR4rHoRFuHuZmwcajqal3GzhC8tyQmvpfwnfVHVSWJazLPxJ/pA4XUuHpvz7o4VZ5MKUJ/sUu5kp+JNn3Q31pdTr8Aj3MX1HxBAGuqeysH1xo/dmLbqLqrmZpFcb4OoVpno2VZu5hXAt6LfuhnZ2n48XYhDB7EPPJX7cmYx8avLMHuOerpm0uLtghPGUbaYhm6EnTHLNnOz+sahgZeS4BhFE3jRf2fKf6CJeg1aKcYPflRy2lBK/eVO/FPWJzd0BWb2oItvq2dfY+UAakbyiSsYKtsLSJWrvF7NeNkNSL6xBgLYbrJR3qNo=
+    on:
+      tags: true
