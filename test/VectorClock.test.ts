@@ -173,4 +173,41 @@ describe('vector-clock', () => {
       expect(j).toEqual(new VectorClock(2, [5, 3, 3]));
     });
   });
+  
+  describe('compare', () => {
+    it('sorts arrays based on basic increment ordering', () => {
+      const a = new VectorClock(0, [0]);
+      const b = a.increment();
+      const c = b.increment();
+      
+      const actual = [c, b, a]
+      actual.sort(VectorClock.compare);
+      
+      expect(actual).toEqual([a, b, c]);
+    });
+    
+    it('Identival vector clocks are sorted by their memberIndex.', () => {
+      const a = new VectorClock(0, [0, 0]);
+      const b = new VectorClock(1, [0, 0]);
+      
+      const actual = [b, a];
+      actual.sort(VectorClock.compare);
+      
+      expect(actual).toEqual([a, b]);
+    });
+    
+    it('sorts clocks across multiple members', () => {
+      const a = new VectorClock(0, [0, 0]);
+      const b = new VectorClock(1, [0, 0]);
+      const c = a.increment();
+      const d = b.update(c);
+      const e = d.increment();
+      
+      const actual = [c, d, e, b, a];
+      actual.sort(VectorClock.compare);
+      
+      expect(actual).toEqual([a, b, c, d, e]);
+    });
+    
+  });
 });
