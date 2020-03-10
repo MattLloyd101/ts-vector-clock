@@ -2,7 +2,7 @@ language: nodejs
 
 nodejs:
   - '12.13'
- 
+
 before_script:
   - npm run setup
   - npm run build
@@ -21,9 +21,10 @@ deploy:
     github_token:
       secure: BI6tG4U1C0iSLcJGuSg0h7LN8UoHUH/alckFRP3pOJy9cxk6f33jhS4oMAGlG5Kr936alkc06uhwUYedMeoItX5/rIXXlZ/0txsYg288MbyZHeR1Qi/EzrzeJDLzAcmiRiFNQ39Y9E7brBZ5yl5leMARzYKfx593lyibXNrTXIp5rVFxz/biIzi14ECHeVptQMpsGGDvHwuSwbveBBP1VWN44WBqDsj0+Hvfjj+HG5SG/e/74NG2DVcnqCw8xRZwm8kIgGMl95CwYyJV/2igZGvQ1hoU+sjmrJkGJ2VgwqNyFLsRWlJ214p1+tGtqZAq+u66BJzAxr6iIJSRZU31zZ51PD3ygCKVUGNkQnZVNH6yvvdOPua+KltLYyQPzUfhg3fu8j1zPw5VqL9ze2s58MooJCGBNDqQo5OxFTlFfAV5Blhxd2I4LvCzfPZdq+YwvdKvGNRI8Fgsk7adt1rA+n5CW2WmJXxlgseZw0uhGKzzb5VnX7fHwLovSf+WboOBzLkFakklKFU+Q7QG7g6gLRU8tbcD3th8lFuAwCp4G2RbrHBOe29VZ4f04WYh6vii2LtP0vY8860CtcZoab5uGzwP9u4vXvly8vvYzCrncCDOeF6lOMUZ274Xt4M28dQikXWpemXqIdXu7Dw+DVjdPhe0nepRZki7jtwerTm47Aw=
   - provider: releases
-    api_key: $GITHUB_TOKEN
+    api_key:
+      secure: BI6tG4U1C0iSLcJGuSg0h7LN8UoHUH/alckFRP3pOJy9cxk6f33jhS4oMAGlG5Kr936alkc06uhwUYedMeoItX5/rIXXlZ/0txsYg288MbyZHeR1Qi/EzrzeJDLzAcmiRiFNQ39Y9E7brBZ5yl5leMARzYKfx593lyibXNrTXIp5rVFxz/biIzi14ECHeVptQMpsGGDvHwuSwbveBBP1VWN44WBqDsj0+Hvfjj+HG5SG/e/74NG2DVcnqCw8xRZwm8kIgGMl95CwYyJV/2igZGvQ1hoU+sjmrJkGJ2VgwqNyFLsRWlJ214p1+tGtqZAq+u66BJzAxr6iIJSRZU31zZ51PD3ygCKVUGNkQnZVNH6yvvdOPua+KltLYyQPzUfhg3fu8j1zPw5VqL9ze2s58MooJCGBNDqQo5OxFTlFfAV5Blhxd2I4LvCzfPZdq+YwvdKvGNRI8Fgsk7adt1rA+n5CW2WmJXxlgseZw0uhGKzzb5VnX7fHwLovSf+WboOBzLkFakklKFU+Q7QG7g6gLRU8tbcD3th8lFuAwCp4G2RbrHBOe29VZ4f04WYh6vii2LtP0vY8860CtcZoab5uGzwP9u4vXvly8vvYzCrncCDOeF6lOMUZ274Xt4M28dQikXWpemXqIdXu7Dw+DVjdPhe0nepRZki7jtwerTm47Aw=
     file_glob: true
-    file: "{YOURLIB}-*.tgz"
+    file: "vector-clock-*.tgz"
     skip_cleanup: true
   - provider: npm
     skip_cleanup: true
