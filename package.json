@@ -1,5 +1,5 @@
 {
-  "name": "vector-clock",
+  "name": "ts-vector-clock",
   "version": "1.0.0",
   "description": "A simple Vector Clock implementation",
   "main": "lib/index.js",
